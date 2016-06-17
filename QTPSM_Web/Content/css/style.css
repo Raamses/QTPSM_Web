@@ -1,0 +1,46 @@
+/* CSS Document */
+
+.navbar {
+	min-height: 80px;
+	margin-bottom: 0px;
+}
+
+.navbar-default .navbar-toggle {
+    margin-top: 23px;
+}
+
+.navbar-logo {
+    height: 80px;
+	padding: 20px 15px;
+}
+
+.navbar-brand {
+	font-family: "Intel Clear Pro";
+	font-size: 20pt;
+	letter-spacing: 0.5px;
+	line-height: 50px;
+    height: 80px;
+}
+
+#name {
+	padding: 3px;
+	text-align: left;
+}
+
+@media (max-width: 767px) {
+	.navbar-logo {
+		padding-top: 22px;
+		padding-bottom: 22px;
+		padding-right: 5px;
+	}
+	
+	.navbar-brand {
+		font-size: 19pt;
+	}
+}
+
+@media (min-width: 768px) {
+	.navbar-right {
+		margin-top: 14px;
+	}
+}

@@ -1,0 +1,69 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-11">
+        <div class="panel panel-primary" id="panelEngineerEffort">
+            <div class="panel-heading">
+                <h3 class="panel-title">Monthly Engineer Effort</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingData">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading engineers...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <h3>Finance Period : {{currentFP}}</h3>
+                <table class="table table-striped">
+                    <tr>
+                        <th class="col-xs-3" style="vertical-align:middle">Full Name</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Billable Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">NonBillable Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Daily Total Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Daily Billable Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Daily NonBillable Effort</th>
+                    </tr>
+                    <tr ng-repeat="engineer in engineerEffortPerFP | orderBy : 'engineer_full_name'">
+                        <td>{{ engineer.engineer_full_name }}</td>
+                        <td>{{ engineer.effort }}</td>
+                        <td>{{ engineer.billableEffort }}</td>
+                        <td>{{ engineer.nonBillableEffort }}</td>
+                        <td>{{ engineer.dailyTotalEffort }}</td>
+                        <td>{{ engineer.dailyBillableEffort }}</td>
+                        <td>{{ engineer.dailyNonBillableEffort }}</td>
+                    </tr>
+
+                </table>
+                <!--<div class="col-xs-12 col-sm-6 movie" ng-repeat="engineer in engineerEffortPerFP">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>{{engineer.engineer_full_name}} </strong>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <a class="fancybox pull-left" rel="gallery1" ng-href="../../Content/images/movies/{{engineer.Image}}" title="{{engineer.finance_period_name | limitTo:200}}">
+                                        <img class="media-object" height="120" ng-src="../../Content/images/movies/{{engineer.Image}}" alt="" />
+                                    </a>
+
+                                </a>
+                                <div class="media-body">
+                                    <label class="label label-info">{{engineer.effort}}</label>
+                                    <div><small>{{engineer.BillableEffort | limitTo: 70}}...</small></div>
+                                    <label class="label label-info">{{engineer.NonBillableEffort}}</label><br />
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <label class="label label-info">{{engineer.DailyTotalEffort}}</label>
+                            <label class="label label-info">{{engineer.DailyBillableEffort}}</label>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+</div>

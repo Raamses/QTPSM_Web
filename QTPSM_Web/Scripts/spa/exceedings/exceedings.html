@@ -1,0 +1,39 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-11">
+        <div class="panel panel-primary" id="panelMonthlyExceedings">
+            <div class="panel-heading">
+                <h3 class="panel-title">Monthly Exceedings</h3>
+            </div>
+
+            <div class="panel-body">
+                <div ng-if="loadingExceedings">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading services...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <h6>Services</h6>
+                <table class="table table-striped">
+                    <tr>
+                        <th class="col-xs-3" style="vertical-align:middle">Service Name</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Billable</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Active</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Current Scope</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Current Effort</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Exceeding</th>
+                    </tr>
+                    <tr ng-repeat="service in services | orderBy : 'name'">
+                        <td>{{ service.name }}</td>
+                        <td>{{ service.billable }}</td>
+                        <td>{{ service.active }}</td>
+                        <td>{{ service.current_scope }}</td>
+                        <td>{{ service.current_effort }}</td>
+                        <td>{{ service.exceeding }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

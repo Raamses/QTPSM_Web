@@ -1,0 +1,669 @@
+﻿body {
+}
+/*---------------------------------auto complete on modal fix------------------------------------------------------*/
+.ui-menu-item {
+    z-index: 50000;
+}
+
+ui-autocomplete {
+    z-index: 50000;
+}
+
+ui-front {
+    z-index: 50000;
+}
+
+ui-menu {
+    z-index: 50000;
+}
+
+ui-widget {
+    z-index: 50000;
+}
+
+ui-widget-content {
+    z-index: 50000;
+}
+
+.modal {
+    z-index: 20 !important;
+}
+
+.modal-backdrop {
+    z-index: 10 !important;
+}
+/*-------------------------------------------------Jquery Validation----------------------------------------------*/
+
+.val-error-class {
+    color: red;
+    font-size: 12px;
+}
+
+/*----------------------------------------------Board Request--------------------------------------------------*/
+​ .quantAndAddPart {
+    width: 50%;
+}
+
+
+#BoardRequestModalContent {
+    height: 80%;
+    width: 80%;
+}
+
+#BoardRequestUpper {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+#BoardRequestColContainer {
+    height: 235px;
+    width: 100%;
+}
+
+#BoardRequestAddColContainer {
+    height: 400px;
+    width: 100%;
+}
+
+#BoardRequestRightCol {
+    float: right;
+    width: 50%;
+    padding-left: 3%;
+    padding-right: 6%;
+    height: 235px;
+}
+
+#BoardRequestLeftCol {
+    float: left;
+    width: 50%;
+    padding-left: 6%;
+    padding-right: 3%;
+    height: 235px;
+}
+
+#BoardRequestLower {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 210px; /*  TEMP BOARD REQ PART 1 HEIGHT */
+    margin-bottom: 10px;
+}
+
+
+#QunatityInputLabel {
+    float: left;
+    width: 100%;
+}
+
+#QuantityInputID {
+    width: 100%;
+    float: left;
+}
+
+#AddBoardBtn {
+    width: 14%;
+    float: right;
+}
+
+#RemoveBoardBtnContainer {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+#RemoveBoardBtn {
+    position: relative;
+    /*bottom : 1px;*/
+    height: 18px;
+    width: 27px;
+}
+
+#RemoveBoardi {
+    font-size: 17px;
+    position: relative;
+    bottom: 7px;
+    right: 8px;
+}
+
+#SumTextContainer {
+    float: left;
+    width: 90%;
+    margin-left: 5px;
+    height: 20px;
+}
+
+#NotesContainer {
+    height: 70px;
+}
+
+#TempTextInfo {
+    height: 20px;
+    width: 100%;
+    border: dotted;
+    border-width: thin;
+    margin-bottom: 10px;
+}
+
+#SumText {
+    margin-bottom: 0px;
+}
+
+#BoardInputID {
+    width: 100%;
+}
+
+#BoardContainer {
+    width: 79%;
+    float: left;
+}
+
+#QuantityContainer {
+    width: 14%;
+    float: right;
+}
+
+#BoardAndQuantityContainer {
+    height: 60px;
+}
+
+#AddBoardBtnContainer {
+    height: 40px;
+}
+
+.VerticalMargin {
+    margin-bottom: 30px;
+}
+
+#BoardSummaryContainer {
+    border: groove;
+    border-width: thin;
+    border-color: whitesmoke;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+#BoardRequestFirstPart {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#BoardRequestSecondPart {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+#BoardRecieverNameInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#BoardRecieverMailInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#BoardRecieverPhoneInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#BoardRecieverCompanyInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#BoardCityInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#BoardCountryInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#BoardZipCodeInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#BoardStateInputContainer {
+    width: 46%;
+    float: right;
+}
+
+/*----------------------------------------------Components Request--------------------------------------------------*/
+
+
+#ComponentsRequestModalContent {
+    height: 80%;
+    width: 80%;
+}
+
+#ComponentsRequestUpper {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+#ComponentsRequestColContainer {
+    height: 235px;
+    width: 100%;
+}
+
+#ComponentsRequestAddColContainer {
+    height: 400px;
+    width: 100%;
+}
+
+#ComponentsRequestLower {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 380px;
+    margin-bottom: 10px;
+}
+
+#ComponentsQunatityInputLabel {
+    float: left;
+    width: 100%;
+}
+
+#ComponentsQuantityInputID {
+    width: 100%;
+    float: left;
+}
+
+#AddComponentsBtnContainer {
+    width: 14%;
+    float: right;
+    margin-top : 26px;
+}
+
+#ComponentsNotesContainer {
+    width: 79%;
+    float: left;
+}
+
+#RemoveComponentsBtnContainer {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+#RemoveComponentsBtn {
+    position: relative;
+    /*bottom : 1px;*/
+    height: 18px;
+    width: 27px;
+}
+
+#RemoveComponentsi {
+    font-size: 17px;
+    position: relative;
+    bottom: 7px;
+    right: 8px;
+}
+
+#ComponentsSumTextContainer {
+    float: left;
+    width: 90%;
+    margin-left: 5px;
+    height: 20px;
+}
+
+#ComponentsNotesContainer {
+    height: 70px;
+}
+
+#ComponentsTempTextInfo {
+    height: 20px;
+    width: 100%;
+    border: dotted;
+    border-width: thin;
+    margin-bottom: 10px;
+}
+
+#ComponentsSumText {
+    margin-bottom: 0px;
+}
+
+#ComponentsContainer {
+    width: 79%;
+    float: left;
+}
+
+#ComponentsQuantityContainer {
+    width: 14%;
+    float: right;
+}
+
+#ComponentsAndQuantityContainer {
+    height: 60px;
+}
+
+#AddComponentsBtnContainer {
+    height: 40px;
+}
+
+#ComponentsSummaryContainer {
+    border: groove;
+    border-width: thin;
+    border-color: whitesmoke;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+
+#ComponentsRequestSecondPart {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#ComponentsRequestSecondPartLine {
+    height: 90px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.TdComponentsCancelButton {
+    padding-right: 20px;
+}
+
+#ComponentsRequestDetails {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsAddBtnContainer {
+    float :left;
+    width : 14%;
+}
+
+.RequestRight {
+    width: 46%;
+    float: right;
+}
+
+.RequestLeft {
+    width: 46%;
+    float: left;
+}
+
+.RequestLine {
+    height: 84px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px !important;
+}
+
+.VerticalModalPadding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/*--------------------------------------------------------------*/
+
+#ComponentsEditAddBtnLine {
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsEditRequestDetails {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsEditAddBtnLine {
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsEditRequestSecondPartLine {
+    height: 90px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.TdComponentsEditCancelButton {
+    padding-right: 20px;
+}
+
+#ComponentsEditRequestDetails {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsEditAddBtnLine {
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#ComponentsEditRequestModalContent {
+    height: 80%;
+    width: 80%;
+}
+
+#ComponentsEditRequestUpper {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+#ComponentsEditRequestColContainer {
+    height: 235px;
+    width: 100%;
+}
+
+#ComponentsEditRequestAddColContainer {
+    height: 400px;
+    width: 100%;
+}
+
+#ComponentsRequestRightCol {
+    float: right;
+    width: 50%;
+    padding-left: 3%;
+    padding-right: 6%;
+    height: 235px;
+}
+
+#ComponentsEditRequestLeftCol {
+    float: left;
+    width: 50%;
+    padding-left: 6%;
+    padding-right: 3%;
+    height: 235px;
+}
+
+#ComponentsEditRequestLower {
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+    height: 380px;
+    margin-bottom: 10px;
+}
+
+
+#ComponentsEditQunatityInputLabel {
+    float: left;
+    width: 100%;
+}
+
+#ComponentsEditQuantityInputID {
+    width: 100%;
+    float: left;
+}
+
+#AddComponentsEditBtn {
+    width: 14%;
+    float: right;
+}
+
+#AddComponentsEditBtnContainer {
+    width: 14%;
+    float: right;
+}
+
+#RemoveComponentsEditBtnContainer {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+#RemoveComponentsEditBtn {
+    position: relative;
+    /*bottom : 1px;*/
+    height: 18px;
+    width: 27px;
+}
+
+#RemoveComponentsEdit {
+    font-size: 17px;
+    position: relative;
+    bottom: 7px;
+    right: 8px;
+}
+
+#ComponentsEditSumTextContainer {
+    float: left;
+    width: 90%;
+    margin-left: 5px;
+    height: 20px;
+}
+
+#ComponentsEditNotesContainer {
+    height: 70px;
+}
+
+#ComponentsEditTempTextInfo {
+    height: 20px;
+    width: 100%;
+    border: dotted;
+    border-width: thin;
+    margin-bottom: 10px;
+}
+
+#ComponentsEditSumText {
+    margin-bottom: 0px;
+}
+
+#ComponentsEditContainer {
+    width: 79%;
+    float: left;
+}
+
+#ComponentsEditQuantityContainer {
+    width: 14%;
+    float: right;
+}
+
+#ComponentsEditAndQuantityContainer {
+    height: 60px;
+}
+
+#AddComponentsEditBtnContainer {
+    height: 40px;
+}
+
+#ComponentsEditSummaryContainer {
+    border: groove;
+    border-width: thin;
+    border-color: whitesmoke;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/*-------------------------------------------*/
+
+#ComponentsEditRecieverNameInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#ComponentsEditRecieverMailInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#ComponentsEditRecieverPhoneInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#ComponentsEditRecieverCompanyInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#ComponentsEditCityInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#ComponentsEditCountryInputContainer {
+    width: 46%;
+    float: right;
+}
+
+#ComponentsEditZipCodeInputContainer {
+    width: 46%;
+    float: left;
+}
+
+#ComponentsEditStateInputContainer {
+    width: 46%;
+    float: right;
+}
+
+.VerticalModalPadding {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*-----------------Edit Board-----------------------*/
+
+#AddEditBoardBtn {
+    width: 14%;
+    float: right;
+}
+
+#EditBoardContainer {
+    width: 79%;
+    float: left;
+}

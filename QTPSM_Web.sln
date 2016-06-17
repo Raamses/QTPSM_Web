@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTPSM_Web", "QTPSM_Web\QTPSM_Web.csproj", "{70838922-0708-4A0A-8348-D3012F57E607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTPSM.Data", "QTPSM.Data\QTPSM.Data.csproj", "{C51BD87D-425D-4CAB-8714-5EF12D299F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QTPSM.Entities", "QTPSM.Entities\QTPSM.Entities.csproj", "{BEC319A8-A90B-49FD-A446-D8969760DA64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70838922-0708-4A0A-8348-D3012F57E607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70838922-0708-4A0A-8348-D3012F57E607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70838922-0708-4A0A-8348-D3012F57E607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70838922-0708-4A0A-8348-D3012F57E607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51BD87D-425D-4CAB-8714-5EF12D299F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51BD87D-425D-4CAB-8714-5EF12D299F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51BD87D-425D-4CAB-8714-5EF12D299F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51BD87D-425D-4CAB-8714-5EF12D299F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEC319A8-A90B-49FD-A446-D8969760DA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC319A8-A90B-49FD-A446-D8969760DA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC319A8-A90B-49FD-A446-D8969760DA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC319A8-A90B-49FD-A446-D8969760DA64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
