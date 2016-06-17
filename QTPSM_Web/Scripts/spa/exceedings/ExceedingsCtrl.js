@@ -10,33 +10,64 @@
         $scope.pageClass = 'page-exceedings';
         $scope.loadingExceedings = true;
         $scope.services = [];
-        $scope.loadServices = loadServices;
+        $scope.page = 0;
+        $scope.pagesCount = 0;
+        //$scope.loadServices = loadServices;
 
-        $scope.openEditDialog = openEditDialog;
+        $scope.search = search;
+        $scope.clearSearch = clearSearch;
 
-        function loadServices() {
+        $scope.search = search;
+        $scope.clearSearch = clearSearch;
+        //$scope.openEditDialog = openEditDialog;
+
+        //function loadServices() {
+        //    $scope.loadingExceedings = true;
+
+        //    apiService.get('/api/services/active', null,
+        //    servicesLoadCompleted,
+        //    servicesLoadFailed);
+        //}
+
+        function search(page) {
+            page = page || 0;
+
             $scope.loadingExceedings = true;
 
-            apiService.get('/api/services/active', null,
-            servicesLoadCompleted,
-            servicesLoadFailed);
+            var config = {
+                params: {
+                    page: page,
+                    pageSize: 10,
+                    filter: $scope.filterServices
+                }
+            };
+
+            apiService.get('/api/services/active', config,
+             servicesLoadCompleted,
+             servicesLoadFailed);
         }
 
-        function openEditDialog(customer) {
-            $scope.EditedCustomer = customer;
-            $modal.open({
-                templateUrl: 'scripts/spa/customers/editCustomerModal.html',
-                controller: 'customerEditCtrl',
-                scope: $scope
-            }).result.then(function ($scope) {
-                clearSearch();
-            }, function () {
-            });
-        }
+        //function openEditDialog(customer) {
+        //    $scope.EditedCustomer = customer;
+        //    $modal.open({
+        //        templateUrl: 'scripts/spa/customers/editCustomerModal.html',
+        //        controller: 'customerEditCtrl',
+        //        scope: $scope
+        //    }).result.then(function ($scope) {
+        //        clearSearch();
+        //    }, function () {
+        //    });
+        //}
 
         function servicesLoadCompleted(result) {
-            $scope.services = result.data;
+
+            $scope.services = result.data.items;
+
+            $scope.page = result.data.page;
+            $scope.pagesCount = result.data.totalPages;
+            $scope.totalCount = result.data.totalCount;
             $scope.loadingExceedings = false;
+
             //notificationService.displayInfo(result.data.Items.length + ' servicess found');
         }
 
@@ -44,7 +75,12 @@
             notificationService.displayError(response.data);
         }
 
-        $scope.loadServices();
+        function clearSearch() {
+            $scope.filterCustomers = '';
+            search();
+        }
+
+        $scope.search();
     }
 
 })(angular.module('QTPSM'));

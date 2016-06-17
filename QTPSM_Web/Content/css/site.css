@@ -37,6 +37,12 @@ body {
     display: inline-flex;
     height: 100%;
 }*/
+.table-striped > tbody > tr.tableRedRow td, .tableRedRow {
+    background-color: #ff0000;
+}
+.tableRedRow {
+    background-color: red;
+}
 
 .red {
     color: red;

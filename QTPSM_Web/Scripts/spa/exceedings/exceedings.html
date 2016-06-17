@@ -24,7 +24,7 @@
                         <th class="col-xs-1" style="vertical-align:middle">Current Effort</th>
                         <th class="col-xs-1" style="vertical-align:middle">Exceeding</th>
                     </tr>
-                    <tr ng-repeat="service in services | orderBy : 'name'">
+                    <tr ng-repeat="service in services | orderBy : 'name'" ng-class="{ 'tableRedRow' : (service.current_scope < service.current_effort) }">
                         <td>{{ service.name }}</td>
                         <td>{{ service.billable }}</td>
                         <td>{{ service.active }}</td>
@@ -33,6 +33,11 @@
                         <td>{{ service.exceeding }}</td>
                     </tr>
                 </table>
+                <div class="panel-footer">
+                    <div class="text-center">
+                        <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="search(page)"></custom-pager>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

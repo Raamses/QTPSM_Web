@@ -32,17 +32,36 @@ namespace QTPSM_Web.Controllers
         }
 
         [AllowAnonymous]
-        [Route("active")]
-        public HttpResponseMessage GetActiveServices(HttpRequestMessage request)
+        [Route("active/{page:int=0}/{pageSize=20}/{filter?}")]
+        public HttpResponseMessage GetActiveServices(HttpRequestMessage request, int? page, int? pageSize, string filter = null)
         {
+            int currentPage = page.Value;
+            int currentPageSize = pageSize.Value;
+            int totalServices = new int();
+
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                var efps = _efpRepository.FindBy(p => p.active).ToList();
 
-                var efpsVM = Mapper.Map<IEnumerable<service>, IEnumerable<servicesViewModel>>(efps);
+                var efps = _efpRepository.FindBy(p => p.active)
+                .OrderBy(p=>p.name)
+                .Skip(currentPage * currentPageSize)
+                .Take(currentPageSize)
+                .ToList();
 
-                response = request.CreateResponse(HttpStatusCode.OK, efpsVM);
+                totalServices = _efpRepository.FindBy(p => p.active).Count();
+
+                var servicesVM = Mapper.Map<IEnumerable<service>, IEnumerable<servicesViewModel>>(efps);
+
+                PaginationSet<servicesViewModel> pagedSet = new PaginationSet<servicesViewModel>()
+                {
+                    Page = currentPage,
+                    TotalCount = totalServices,
+                    TotalPages = (int)Math.Ceiling((decimal)totalServices / currentPageSize),
+                    Items = servicesVM
+                };
+
+                response = request.CreateResponse(HttpStatusCode.OK, pagedSet);
 
                 return response;
             });
