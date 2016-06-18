@@ -24,7 +24,9 @@
                         <th class="col-xs-1" style="vertical-align:middle">Current Effort</th>
                         <th class="col-xs-1" style="vertical-align:middle">Exceeding</th>
                     </tr>
-                    <tr ng-repeat="service in services | orderBy : 'name'" ng-class="{ 'tableRedRow' : (service.current_scope < service.current_effort) }">
+                    <!--<tr ng-repeat="service in services | orderBy : 'name'" ng-class="{ 'tableExceededRow' : (service.current_scope < service.current_effort) }">
+                    -->
+                    <tr ng-repeat="service in services | orderBy : 'name'" ng-class="getExceedingBGColor(service)">
                         <td>{{ service.name }}</td>
                         <td>{{ service.billable }}</td>
                         <td>{{ service.active }}</td>

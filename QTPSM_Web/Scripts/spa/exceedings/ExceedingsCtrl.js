@@ -12,7 +12,7 @@
         $scope.services = [];
         $scope.page = 0;
         $scope.pagesCount = 0;
-        //$scope.loadServices = loadServices;
+        $scope.getExceedingBGColor = getExceedingBGColor;
 
         $scope.search = search;
         $scope.clearSearch = clearSearch;
@@ -20,14 +20,33 @@
         $scope.search = search;
         $scope.clearSearch = clearSearch;
         //$scope.openEditDialog = openEditDialog;
+        var colorMap = {
+            exceeded: "tableExceededRow",
+            fivePercent: "tableFivePercentRow",
+            tenPercent: "tableTenPercentRow"
+        }
 
-        //function loadServices() {
-        //    $scope.loadingExceedings = true;
+        Number.prototype.between = function (a, b) {
+            var min = Math.min.apply(Math, [a, b]),
+              max = Math.max.apply(Math, [a, b]);
+            return this > min && this < max;
+        };
 
-        //    apiService.get('/api/services/active', null,
-        //    servicesLoadCompleted,
-        //    servicesLoadFailed);
-        //}
+        function getExceedingBGColor(service) {
+            var mod = (service.current_effort / service.current_scope) * 100;
+            if (service.current_scope <= service.current_effort) {
+                return colorMap.exceeded;
+            }
+            else if (mod.between(95, 100)) {
+                return colorMap.fivePercent;
+            }
+            else if (mod.between(90, 95)) {
+                return colorMap.tenPercent;
+            }
+            else {
+                return '';
+            }
+        }
 
         function search(page) {
             page = page || 0;
@@ -37,7 +56,7 @@
             var config = {
                 params: {
                     page: page,
-                    pageSize: 10,
+                    pageSize: 15,
                     filter: $scope.filterServices
                 }
             };
@@ -46,18 +65,6 @@
              servicesLoadCompleted,
              servicesLoadFailed);
         }
-
-        //function openEditDialog(customer) {
-        //    $scope.EditedCustomer = customer;
-        //    $modal.open({
-        //        templateUrl: 'scripts/spa/customers/editCustomerModal.html',
-        //        controller: 'customerEditCtrl',
-        //        scope: $scope
-        //    }).result.then(function ($scope) {
-        //        clearSearch();
-        //    }, function () {
-        //    });
-        //}
 
         function servicesLoadCompleted(result) {
 
@@ -79,6 +86,8 @@
             $scope.filterCustomers = '';
             search();
         }
+
+
 
         $scope.search();
     }
