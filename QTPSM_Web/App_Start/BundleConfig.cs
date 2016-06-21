@@ -39,12 +39,15 @@ namespace QTPSM_Web
                       ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-               "~/content/css/bootstrap.css",
-               "~/content/css/bootstrap-theme.css",
+               //"~/content/css/bootstrap.css",
+               //"~/content/css/bootstrap-theme.css",
                 "~/content/css/font-awesome.css",
                "~/content/css/morris.css",
                "~/content/css/toastr.css",
                "~/content/css/jquery.fancybox.css",
+               "~/content/css/it-mlaf-docs.css",
+               "~/content/css/it-mlaf.css",
+               //"~/content/css/it-mlaf.min.css",
                "~/content/css/site.css",
                "~/content/css/loading-bar.css"));
 

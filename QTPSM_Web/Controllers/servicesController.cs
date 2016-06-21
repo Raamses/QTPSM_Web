@@ -42,14 +42,29 @@ namespace QTPSM_Web.Controllers
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
+                List<service> efps = null;
 
-                var efps = _efpRepository.FindBy(p => p.active)
-                .OrderBy(p=>p.name)
-                .Skip(currentPage * currentPageSize)
-                .Take(currentPageSize)
-                .ToList();
+                if (string.IsNullOrEmpty(filter))
+                {
+                    efps = _efpRepository.FindBy(p => p.active)
+                   .OrderBy(p => p.name)
+                   .Skip(currentPage * currentPageSize)
+                   .Take(currentPageSize)
+                   .ToList();
 
-                totalServices = _efpRepository.FindBy(p => p.active).Count();
+                    totalServices = _efpRepository.FindBy(p => p.active).Count();
+                }
+                else
+                {
+                    efps = _efpRepository.FindBy(p => p.active && p.name.Contains(filter))
+                    .OrderBy(p => p.name)
+                    .Skip(currentPage * currentPageSize)
+                    .Take(currentPageSize)
+                    .ToList();
+
+                    totalServices = _efpRepository.FindBy(p => p.active && p.name.Contains(filter)).Count();
+                }
+
 
                 var servicesVM = Mapper.Map<IEnumerable<service>, IEnumerable<servicesViewModel>>(efps);
 

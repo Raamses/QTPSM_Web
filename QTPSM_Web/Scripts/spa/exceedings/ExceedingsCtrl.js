@@ -37,11 +37,8 @@
             if (service.current_scope <= service.current_effort) {
                 return colorMap.exceeded;
             }
-            else if (mod.between(95, 100)) {
+            else if (mod.between(70, 100)) {
                 return colorMap.fivePercent;
-            }
-            else if (mod.between(90, 95)) {
-                return colorMap.tenPercent;
             }
             else {
                 return '';
@@ -75,7 +72,7 @@
             $scope.totalCount = result.data.totalCount;
             $scope.loadingExceedings = false;
 
-            //notificationService.displayInfo(result.data.Items.length + ' servicess found');
+            notificationService.displayInfo(result.data.items.length + ' services found of total ' + $scope.totalCount);
         }
 
         function servicesLoadFailed(response) {
@@ -83,7 +80,7 @@
         }
 
         function clearSearch() {
-            $scope.filterCustomers = '';
+            $scope.filterServices = '';
             search();
         }
 

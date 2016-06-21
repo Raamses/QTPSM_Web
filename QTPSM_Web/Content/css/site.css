@@ -37,15 +37,13 @@ body {
     display: inline-flex;
     height: 100%;
 }*/
-.table-striped > tbody > tr.tableExceededRow td, .tableExceededRow {
-    background-color: #ff0000;
-}
+
 .tableExceededRow {
-    background-color: red;
+    background-color: #E65266;
 }
 
 .tableFivePercentRow {
-    background-color: darkorange;
+    background-color: #FEFF79;
 }
 
 .tableTenPercentRow {
