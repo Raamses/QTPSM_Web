@@ -22,25 +22,36 @@
                     <div class="col-xs-4"></div>
                 </div>
                 <h6>Services</h6>
-                <table class="table table-striped">
+                <table id="tblServices" class="table">
                     <tr>
                         <th class="col-xs-3" style="vertical-align:middle">Service Name</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Billable</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Active</th>
                         <th class="col-xs-1" style="vertical-align:middle">Current Scope</th>
                         <th class="col-xs-1" style="vertical-align:middle">Current Effort</th>
                         <th class="col-xs-1" style="vertical-align:middle">Exceeding</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Billable</th>
+                        <th class="col-xs-1" style="vertical-align:middle">Active</th>
                     </tr>
                     <!--<tr ng-repeat="service in services | orderBy : 'name'" ng-class="{ 'tableExceededRow' : (service.current_scope < service.current_effort) }">
                     -->
-                    <tr ng-repeat="service in services | orderBy : 'name'" ng-class="getExceedingBGColor(service)">
-                        <td>{{ service.name }}</td>
-                        <td>{{ service.billable }}</td>
-                        <td>{{ service.active }}</td>
-                        <td>{{ service.current_scope }}</td>
-                        <td>{{ service.current_effort }}</td>
-                        <td>{{ service.exceeding }}</td>
-                    </tr>
+                    <tbody data-toggle="collapse" data-target="#{{ service.id }}" data-parent="#tblServices" ng-repeat="service in services | orderBy : 'name'" ng-class="getExceedingBGColor(service)">
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.current_scope }}</td>
+                            <td>{{ service.current_effort }}</td>
+                            <td>{{ service.exceeding }}</td>
+                            <td>{{ service.billable }}</td>
+                            <td>{{ service.active }}</td>
+                        </tr>
+                        <tr id="{{ service.id }}" class="sublinks collapse tableDefaultColor">
+                            <td>
+                                <ul>
+                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
+                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
+                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div class="panel-footer">
                     <div class="text-center">

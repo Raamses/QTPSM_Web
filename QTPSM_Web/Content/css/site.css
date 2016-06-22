@@ -30,6 +30,10 @@ body {
     color: #a55400;
 }
 
+.table > tbody + tbody {
+    border-top: none;
+}
+
 /*.tableColumn {
     vertical-align:middle
 }*/
@@ -39,15 +43,15 @@ body {
 }*/
 
 .tableExceededRow {
-    background-color: #E65266;
+    background-color: #FFCDCD;
 }
 
 .tableFivePercentRow {
-    background-color: #FEFF79;
-}
+    background-color: #FFFFB4;
+} 
 
-.tableTenPercentRow {
-    background-color: gold;
+.tableDefaultColor {
+    background-color: white;
 }
 
 .red {
