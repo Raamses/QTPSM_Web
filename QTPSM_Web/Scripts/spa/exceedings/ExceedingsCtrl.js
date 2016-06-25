@@ -13,6 +13,8 @@
         $scope.page = 0;
         $scope.pagesCount = 0;
         $scope.getExceedingBGColor = getExceedingBGColor;
+        $scope.columnNames = [];
+
 
         $scope.search = search;
         $scope.clearSearch = clearSearch;
@@ -25,6 +27,7 @@
             fivePercent: "tableFivePercentRow",
             tenPercent: "tableTenPercentRow"
         }
+
 
         Number.prototype.between = function (a, b) {
             var min = Math.min.apply(Math, [a, b]),
@@ -66,6 +69,7 @@
         function servicesLoadCompleted(result) {
 
             $scope.services = result.data.items;
+            $scope.columnNames = ["Service Name", "Current Scope", "Current Effort", "Exceeding", "Billable", "Active"];
 
             $scope.page = result.data.page;
             $scope.pagesCount = result.data.totalPages;
@@ -83,8 +87,6 @@
             $scope.filterServices = '';
             search();
         }
-
-
 
         $scope.search();
     }

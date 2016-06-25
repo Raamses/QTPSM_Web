@@ -61,6 +61,7 @@ namespace QTPSM_Web
                "~/Scripts/spa/layout/topBar.directive.js",
                "~/Scripts/spa/layout/sideBar.directive.js",
                "~/Scripts/spa/layout/customPager.directive.js",
+               "~/Scripts/spa/layout/customNestedTableColumn.directive.js",
                "~/Scripts/spa/home/rootCtrl.js",
                "~/Scripts/spa/home/indexCtrl.js",
                "~/Scripts/spa/exceedings/exceedingsCtrl.js"

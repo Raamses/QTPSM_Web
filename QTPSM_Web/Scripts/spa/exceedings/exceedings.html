@@ -23,16 +23,10 @@
                 </div>
                 <h6>Services</h6>
                 <table id="tblServices" class="table">
-                    <tr>
-                        <th class="col-xs-3" style="vertical-align:middle">Service Name</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Current Scope</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Current Effort</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Exceeding</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Billable</th>
-                        <th class="col-xs-1" style="vertical-align:middle">Active</th>
-                    </tr>
-                    <!--<tr ng-repeat="service in services | orderBy : 'name'" ng-class="{ 'tableExceededRow' : (service.current_scope < service.current_effort) }">
-                    -->
+                    <thead>
+                        <tr custom-nested-table-column column-names="columnNames">
+                        </tr>
+                    </thead>
                     <tbody data-toggle="collapse" data-target="#{{ service.id }}" data-parent="#tblServices" ng-repeat="service in services | orderBy : 'name'" ng-class="getExceedingBGColor(service)">
                         <tr>
                             <td>{{ service.name }}</td>

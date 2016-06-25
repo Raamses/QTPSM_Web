@@ -317,7 +317,9 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\spa\exceedings\exceedings.html" />
     <Content Include="Scripts\spa\exceedings\exceedingsCtrl.js" />
+    <Content Include="Scripts\spa\layout\customNestedTableColumn.directive.js" />
     <Content Include="Scripts\spa\layout\customPager.directive.js" />
+    <Content Include="Scripts\spa\layout\nestedTableColumn.html" />
     <Content Include="Scripts\spa\layout\pager.html" />
     <Content Include="Scripts\vendors\angular-mocks.js" />
     <Content Include="Scripts\vendors\angular.js" />
