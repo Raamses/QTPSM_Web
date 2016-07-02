@@ -28,7 +28,8 @@ namespace QTPSM_Web.Models
 
         public double? exceeding { get; set; }
 
-        public ICollection<scope_exceeding> scope_exceedings { get; set; }
+        //changed it to DTO in order to be able to eagerload and not get a serialization error for circular reference.
+        public ICollection<exceedingViewModel> scope_exceedings { get; set; }
 
     }
 }

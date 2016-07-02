@@ -8,8 +8,8 @@ namespace QTPSM_Web
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            //            "~/Scripts/jquery-{version}.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
@@ -20,7 +20,7 @@ namespace QTPSM_Web
                       "~/Scripts/Vendors/jquery.js",
                 "~/Scripts/Vendors/bootstrap.js",
                 "~/Scripts/Vendors/toastr.js",
-                "~/Scripts/Vendors/jquery.raty.js",
+                //"~/Scripts/Vendors/jquery.raty.js",
                 "~/Scripts/Vendors/respond.src.js",
                 "~/Scripts/Vendors/angular.js",
                 "~/Scripts/Vendors/angular-route.js",
@@ -31,10 +31,10 @@ namespace QTPSM_Web
                 "~/Scripts/Vendors/angucomplete-alt.min.js",
                 "~/Scripts/Vendors/ui-bootstrap-tpls-0.13.1.js",
                 "~/Scripts/Vendors/underscore.js",
-                "~/Scripts/Vendors/raphael.js",
-                "~/Scripts/Vendors/morris.js",
-                "~/Scripts/Vendors/jquery.fancybox.js",
-                "~/Scripts/Vendors/jquery.fancybox-media.js",
+                //"~/Scripts/Vendors/raphael.js",
+                //"~/Scripts/Vendors/morris.js",
+                //"~/Scripts/Vendors/jquery.fancybox.js",
+                //"~/Scripts/Vendors/jquery.fancybox-media.js",
                 "~/Scripts/Vendors/loading-bar.js"
                       ));
 
@@ -42,9 +42,9 @@ namespace QTPSM_Web
                //"~/content/css/bootstrap.css",
                //"~/content/css/bootstrap-theme.css",
                 "~/content/css/font-awesome.css",
-               "~/content/css/morris.css",
+               //"~/content/css/morris.css",
                "~/content/css/toastr.css",
-               "~/content/css/jquery.fancybox.css",
+               //"~/content/css/jquery.fancybox.css",
                "~/content/css/it-mlaf-docs.css",
                "~/content/css/it-mlaf.css",
                //"~/content/css/it-mlaf.min.css",

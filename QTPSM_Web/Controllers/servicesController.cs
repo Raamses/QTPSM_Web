@@ -47,6 +47,7 @@ namespace QTPSM_Web.Controllers
                 if (string.IsNullOrEmpty(filter))
                 {
                     efps = _efpRepository.FindBy(p => p.active)
+                    .Include(i => i.scope_exceeding)
                    .OrderBy(p => p.name)
                    .Skip(currentPage * currentPageSize)
                    .Take(currentPageSize)
@@ -57,6 +58,7 @@ namespace QTPSM_Web.Controllers
                 else
                 {
                     efps = _efpRepository.FindBy(p => p.active && p.name.Contains(filter))
+                    .Include(i => i.scope_exceeding)
                     .OrderBy(p => p.name)
                     .Skip(currentPage * currentPageSize)
                     .Take(currentPageSize)

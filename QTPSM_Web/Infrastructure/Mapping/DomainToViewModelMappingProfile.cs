@@ -49,9 +49,20 @@ namespace QTPSM_Web.Infrastructure.Mapping
                     .ForMember(vm => vm.name, map => map.MapFrom(m => m.name))
                     .ForMember(vm => vm.po_number, map => map.MapFrom(m => m.po_number))
                     .ForMember(vm => vm.po_remaining_amount, map => map.MapFrom(m => m.po_remaining_amount))
-                    .ForMember(vm => vm.scope_exceedings, map => map.Ignore())
+                    .ForMember(vm => vm.scope_exceedings, map => map.MapFrom(m => m.scope_exceeding))
                     .ForMember(vm => vm.service_billing_type, map => map.MapFrom(m => m.service_billing_type));
 
+                    cfg.CreateMap<scope_exceeding, exceedingViewModel>()
+                   .ForMember(vm => vm.id, map => map.MapFrom(m => m.id))
+                   .ForMember(vm => vm.requested_date, map => map.MapFrom(m => m.requested_date))
+                   .ForMember(vm => vm.scope, map => map.MapFrom(m => m.scope))
+                   .ForMember(vm => vm.exceeding_comments, map => map.MapFrom(m => m.exceeding_comments))
+                   .ForMember(vm => vm.finance_period, map => map.MapFrom(m => m.finance_period))
+                   .ForMember(vm => vm.scope_exceeding_status, map => map.MapFrom(m => m.scope_exceeding_status))
+                   .ForMember(vm => vm.service_id, map => map.MapFrom(m => m.service_id))
+                   .ForMember(vm => vm.status_id, map => map.MapFrom(m => m.status_id))
+                   .ForMember(vm => vm.updated_by, map => map.MapFrom(m => m.updated_by))
+                   .ForMember(vm => vm.update_timestamp, map => map.MapFrom(m => m.update_timestamp));
                 });
         }
 

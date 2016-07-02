@@ -257,6 +257,7 @@
     <Compile Include="Infrastructure\Mapping\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Infrastructure\MessageHandlers\effot_per_engineer_and_fpAuthHandler.cs" />
     <Compile Include="Infrastructure\Validators\effort_per_engineer_and_fpValidator.cs" />
+    <Compile Include="Models\exceedingViewModel.cs" />
     <Compile Include="Models\finance_periodViewModel.cs" />
     <Compile Include="Models\servicesViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

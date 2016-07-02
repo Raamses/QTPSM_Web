@@ -22,7 +22,7 @@
             //        }
             //    };
             //}
-        }
+        };
     }
 
 })(angular.module('common.ui'));

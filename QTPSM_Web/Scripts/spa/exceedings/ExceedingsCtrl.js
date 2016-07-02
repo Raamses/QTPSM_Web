@@ -14,10 +14,8 @@
         $scope.pagesCount = 0;
         $scope.getExceedingBGColor = getExceedingBGColor;
         $scope.columnNames = [];
+        //$scope.nestedTableColumnNames = [];
 
-
-        $scope.search = search;
-        $scope.clearSearch = clearSearch;
 
         $scope.search = search;
         $scope.clearSearch = clearSearch;
@@ -26,21 +24,21 @@
             exceeded: "tableExceededRow",
             fivePercent: "tableFivePercentRow",
             tenPercent: "tableTenPercentRow"
-        }
-
-
-        Number.prototype.between = function (a, b) {
-            var min = Math.min.apply(Math, [a, b]),
-              max = Math.max.apply(Math, [a, b]);
-            return this > min && this < max;
         };
 
+
+        function between(num, a, b) {
+            var min = Math.min.apply(Math, [a, b]),
+             max = Math.max.apply(Math, [a, b]);
+            return num > min && num < max;
+        }
+
         function getExceedingBGColor(service) {
-            var mod = (service.current_effort / service.current_scope) * 100;
+            var mod = service.current_effort / service.current_scope * 100;
             if (service.current_scope <= service.current_effort) {
                 return colorMap.exceeded;
             }
-            else if (mod.between(70, 100)) {
+            else if (between(mod, 70, 100)) {
                 return colorMap.fivePercent;
             }
             else {
@@ -70,6 +68,7 @@
 
             $scope.services = result.data.items;
             $scope.columnNames = ["Service Name", "Current Scope", "Current Effort", "Exceeding", "Billable", "Active"];
+            //$scope.nestedTableColumnNames = ["ID", "Requested Date", "Scope", "Finance Period", "Exceeding Status", "Update Timestamp", "Updated By", "Comments"];
 
             $scope.page = result.data.page;
             $scope.pagesCount = result.data.totalPages;

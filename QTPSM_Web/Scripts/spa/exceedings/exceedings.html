@@ -37,12 +37,33 @@
                             <td>{{ service.active }}</td>
                         </tr>
                         <tr id="{{ service.id }}" class="sublinks collapse tableDefaultColor">
-                            <td>
-                                <ul>
-                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
-                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
-                                    <li><a ng-href="#/exceedings/">Exceedings</a></li>
-                                </ul>
+                            <td colspan="7">
+                               <table class="table-intel-striped">
+                                   <thead>
+                                       <tr>
+                                           <th class="col-xs-1" style="vertical-align:middle">ID</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Requested Date</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Scope</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Finance Period</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Exceeding Status</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Update Timestamp</th>
+                                           <th class="col-xs-1" style="vertical-align:middle">Updated By</th>
+                                           <th class="col-xs-offset-3" style="vertical-align:middle">Comments</th>
+                                       </tr>
+                                   </thead>
+                                   <tbody>
+                                       <tr ng-repeat="ex in service.scope_exceedings | orderBy : 'id'">
+                                           <td>{{ex.id}}</td>
+                                           <td>{{ex.requested_date | date:'mediumDate'}}</td>
+                                           <td>{{ex.scope}}</td>
+                                           <td>{{ex.finance_period_id}}</td>
+                                           <td>{{ex.status_id}}</td>
+                                           <td>{{ex.update_timestamp | date:'mediumDate'}}</td>
+                                           <td>{{ex.updated_by}}</td>
+                                           <td>{{ex.exceeding_comments}}</td>
+                                       </tr>
+                                   </tbody>
+                               </table>
                             </td>
                         </tr>
                     </tbody>
